@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magical Messages</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to our Magical Messages!</h1>
+      <div id="messageDisplay">
+        <!-- Messages will be displayed here dynamically -->
+      </div>
+      <form id="messageForm">
+        <label for="magicalWord">Enter Magical Word:</label>
+        <input type="text" id="magicalWord" name="magicalWord" required />
+        <br />
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+        <br />
+        <button type="submit">Save Message</button>
+      </form>
+    </div>
+    <!-- jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Your Custom Scripts -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+  </body>
+</html>
